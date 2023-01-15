@@ -1,4 +1,61 @@
+html {
+  background-color: #1B1A17;
+}
+
 .App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todoapp {
+  display: grid;
+  justify-items: center;
+  /* flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  background-color: #242320;
+  padding: 5px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 20px;
+}
+
+.submit-btn {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  background-color: #242320;
+  color: #FF8303;
+  font-size: 50px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+}
+
+:focus {
+  outline: 0;
+}
+
+/* .App {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,7 +85,7 @@
 
 :focus {
   outline: 0;
-}
+} */
 
 /* MAİN CSS */
 
@@ -37,7 +94,7 @@
 
 
 /* FOOTER CSS */
-.info {
+/* .info {
   color: #bfbfbf;
   font-size: 10px;
 }
@@ -49,6 +106,6 @@
 
 .info a:hover {
   text-decoration: underline;
-}
+} */
 
 /* FOOTER CSS */

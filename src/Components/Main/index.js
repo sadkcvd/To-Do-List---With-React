@@ -2,17 +2,18 @@ import React from 'react'
 
 const Main = ({ todoList }) => {
   return (
-    <div>
-      <section className='main'>
-        <ul>
-          {todoList.map((item, idx) => (
-            <li key={idx}>
-              {item.text}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </div>
+
+    <section className='main'>
+      <ul>
+        {todoList.map((item, idx) => (
+          <li key={idx}>
+            <h2>{item.todoTitle}</h2>
+            <p>{item.todoContent}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
   )
 }
 
