@@ -1,8 +1,18 @@
 import React from 'react'
 
-const Main = () => {
+const Main = ({ todoList }) => {
   return (
-    <div>Main</div>
+    <div>
+      <section className='main'>
+        <ul>
+          {todoList.map((item, idx) => (
+            <li key={idx}>
+              {item.text}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
   )
 }
 
