@@ -9,6 +9,7 @@ const Main = ({ todoList }) => {
           <li key={idx}>
             <h2>{item.todoTitle}</h2>
             <p>{item.todoContent}</p>
+            <button>X</button>
           </li>
         ))}
       </ul>

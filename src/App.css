@@ -1,5 +1,6 @@
 html {
   background-color: #1B1A17;
+  font-size: 62.5%;
 }
 
 .App {
@@ -11,49 +12,93 @@ html {
 .todoapp {
   display: grid;
   justify-items: center;
-  /* flex-direction: column;
-  align-items: center; */
-  /* justify-content: center; */
   margin-top: 50px;
 }
 
-input {
+.grid-container {
+  display: grid;
+  grid-template-columns: 65% auto;
+  gap: 20px;
+}
+
+.grid-container>input {
   width: 100%;
   background-color: #242320;
   padding: 5px;
   border: 1px solid #FF8303;
   border-radius: 5px;
-  margin-bottom: 5px;
   color: white;
   font-size: 16px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 100% 50%;
-  grid-template-rows: 50% 50%;
-  gap: 20px;
-}
-
-.submit-btn {
+.grid-container>button {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-}
-
-button {
-  height: 100%;
   width: 100%;
   background-color: #242320;
   color: #FF8303;
   font-size: 50px;
   border: 1px solid #FF8303;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
 }
+
+.grid-container>button:hover {
+  color: white;
+  background-color: #FF8303;
+  border: 1px solid white;
+}
+
+ul {
+  display: grid;
+  list-style-type: none;
+  margin-top: 50px;
+  padding: 0px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 80% auto;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #242320;
+  row-gap: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+}
+
+li>h2 {
+  color: white;
+}
+
+li>p {
+  color: white;
+}
+
+li>button {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+/* animation: buttonPlusAnimation 2s infinite; */
+/* @keyframes buttonPlusAnimation {
+  from {
+    color: #FF8303;
+  }
+  to {
+    color: #ffffff;
+  }
+} */
 
 :focus {
   outline: 0;
 }
+
+
 
 /* .App {
   margin: 0;
