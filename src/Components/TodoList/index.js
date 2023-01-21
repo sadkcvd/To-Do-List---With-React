@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiFillEdit, AiOutlineInfoCircle, AiOutlineShareAlt } from 'react-icons/ai';
 
 const TodoList = ({ todoItem, setTodoList, todoList }) => {
 
@@ -8,11 +9,19 @@ const TodoList = ({ todoItem, setTodoList, todoList }) => {
   }
 
   return (
+    <>
       <li>
         <h2>{todoItem.todoTitle}</h2>
         <p>{todoItem.todoContent}</p>
         <button onClick={deleteHandler}>X</button>
       </li>
+
+      <div className='li-buttons'>
+        <button><AiFillEdit /></button>
+        <button><AiOutlineShareAlt /></button>
+        <button><AiOutlineInfoCircle /></button>
+      </div>
+    </>
   )
 }
 
