@@ -1,6 +1,5 @@
 html {
   background-color: #1B1A17;
-  font-size: 62.5%;
 }
 
 .App {
@@ -17,8 +16,11 @@ html {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 65% auto;
-  gap: 20px;
+  align-content: center;
+  /* grid-template-columns: 70% auto; */
+  grid-template-rows: 50% 50%;
+  row-gap: 10px;
+  column-gap: 20px;
 }
 
 .grid-container>input {
@@ -31,18 +33,24 @@ html {
   font-size: 16px;
 }
 
+:focus {
+  outline: 0;
+}
+
 .grid-container>button {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 3;
   width: 100%;
   background-color: #242320;
-  color: #FF8303;
+  color: #FF8303; 
   font-size: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 1px solid #FF8303;
   border-radius: 5px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 .grid-container>button:hover {
@@ -51,21 +59,31 @@ html {
   border: 1px solid white;
 }
 
+.main {
+  padding: 25px;
+}
+
+.header {
+  padding: 25px;
+}
+
 ul {
   display: grid;
+  justify-items: center;
   list-style-type: none;
-  margin-top: 50px;
   padding: 0px;
 }
 
 li {
   display: grid;
   grid-template-columns: 80% auto;
+  /* max-width: 250px; */
+  width: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #242320;
-  row-gap: 10px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #FF8303;
   border-radius: 5px;
@@ -82,7 +100,32 @@ li>p {
 li>button {
   grid-column-start: 2;
   grid-row-start: 1;
+  width: 100%;
+  background-color: #242320;
+  color: #FF8303;
+  padding: 10px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+li>button:hover {
+  color: white;
+  background-color: #FF8303;
+  border: 1px solid white;
+}
+
+.main-empty>.no-tasks {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.main-empty>hr {
+  border: 1px solid #FF8303;
+}
+
 
 /* animation: buttonPlusAnimation 2s infinite; */
 /* @keyframes buttonPlusAnimation {
@@ -94,48 +137,7 @@ li>button {
   }
 } */
 
-:focus {
-  outline: 0;
-}
 
-
-
-/* .App {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-.todoapp {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.todoapp h1 {
-  color: rgba(175, 47, 47, 0.15);
-  font-weight: 500;
-  font-size: 100px;
-  margin: 0;
-}
-
-.new-todo {
-  padding: 16px 16px 16px 16px;
-  border: none;
-  box-shadow: inset 0 -2px 5px rgb(0 0 0 / 5%);
-}
-
-:focus {
-  outline: 0;
-} */
-
-/* MAİN CSS */
-
-
-/* MAİN CSS */
 
 
 /* FOOTER CSS */
