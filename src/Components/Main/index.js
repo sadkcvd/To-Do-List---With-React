@@ -1,18 +1,16 @@
 import React from 'react'
+import TodoList from "../TodoList/index";
+const Main = ({ todoList, setTodoList, filteredTodos }) => {
 
-const Main = ({ todoList }) => {
+
   return (
-
     <section className='main'>
       {todoList.length > 0 ?
         <ul>
-          {todoList.map((item, idx) => (
-            <li key={idx}>
-              <h2>{item.todoTitle}</h2>
-              <p>{item.todoContent}</p>
-              <button>X</button>
-            </li>
-          ))}
+          {
+            filteredTodos.map(todoItem =>
+              <TodoList key={todoItem.id} todoItem={todoItem} todoList={todoList} setTodoList={setTodoList} />
+            )}
         </ul>
         :
         <div className='main-empty'>
