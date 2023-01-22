@@ -9,7 +9,10 @@ const Main = ({ todoList, setTodoList, filteredTodos }) => {
         <ul>
           {
             filteredTodos.map(todoItem =>
-              <TodoList key={todoItem.id} todoItem={todoItem} todoList={todoList} setTodoList={setTodoList} />
+              <TodoList key={todoItem.id}
+                todoItem={todoItem}
+                todoList={todoList}
+                setTodoList={setTodoList} />
             )}
         </ul>
         :

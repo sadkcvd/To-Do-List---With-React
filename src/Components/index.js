@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Header from "./Header/index"
 import Main from "./Main/index"
-// import Footer from "./Footer/index"
 const Todo = () => {
 
   const [todoTitle, setTodoTitle] = useState("");
   const [todoContent, setTodoContent] = useState("");
   const [todoList, setTodoList] = useState([]);
-  const [status, setStatus] = useState("all")
+  const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
