@@ -40,6 +40,27 @@ const TodoList = ({ todoItem, setTodoList, todoList }) => {
         <button><AiOutlineShareAlt /></button>
         <button onClick={completeHandler}><AiOutlineCheckSquare /></button>
       </div>
+
+      <div className='edit-popup'>
+
+        <div className='close-popup'>
+          <button>X</button>
+        </div>
+
+        <div className='edit-body'>
+
+          <input className='edit-title' placeholder='Edit Title..' />
+          <input className='edit-content' placeholder='Edit Content..' />
+
+          <div className='edit-buttons'>
+            <button>Cancel</button>
+            <button>Save</button>
+          </div>
+
+        </div>
+
+
+      </div>
     </>
   )
 }

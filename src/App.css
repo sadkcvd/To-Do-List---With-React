@@ -222,3 +222,84 @@ ul {
   transform: rotate(360deg);
   border-radius: 20px;
 }
+
+.edit-popup {
+  margin-top: 5%;
+  position: absolute;
+  display: grid;
+  background-color: #242320;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.edit-popup>.edit-body>.edit-title {
+  background-color: #242320;
+  padding: 10px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.edit-popup>.edit-body>.edit-content {
+  background-color: #242320;
+  padding: 10px;
+  padding-bottom: 50%;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.edit-popup>.edit-body>.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-popup>.edit-body>.edit-buttons>button {
+  background-color: #242320;
+  color: white;
+  padding: 5px;
+  border: 1px solid #FF8303;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.edit-popup>.edit-body>.edit-buttons>button:hover {
+  background-color: #FF8303;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.edit-popup>.close-popup {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-popup>.close-popup>button {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #242320;
+  border: 1px solid #FF8303;
+  border-radius: 6px;
+  color: #FF8303;
+  font-size: large;
+  transition: 0.5s;
+}
+
+.edit-popup>.close-popup>button:hover {
+  color: white;
+  background-color: #FF8303;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.edit-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
