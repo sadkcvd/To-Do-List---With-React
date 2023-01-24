@@ -25,7 +25,6 @@ html {
 .grid-container {
   display: grid;
   align-content: center;
-  /* grid-template-columns: 70% auto; */
   grid-template-rows: 50% 50%;
   row-gap: 10px;
   column-gap: 20px;
@@ -224,7 +223,6 @@ ul {
 }
 
 .edit-popup {
-  margin-top: 5%;
   position: absolute;
   display: grid;
   background-color: #242320;
@@ -234,7 +232,16 @@ ul {
   z-index: 1;
 }
 
+.edit-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
 .edit-popup>.edit-body>.edit-title {
+  width: 100%;
   background-color: #242320;
   padding: 10px;
   border: 1px solid #FF8303;
@@ -244,6 +251,7 @@ ul {
 }
 
 .edit-popup>.edit-body>.edit-content {
+  width: 100%;
   background-color: #242320;
   padding: 10px;
   padding-bottom: 50%;
@@ -253,12 +261,12 @@ ul {
   font-size: 16px;
 }
 
-.edit-popup>.edit-body>.edit-buttons {
+.edit-popup>.edit-buttons {
   display: flex;
   justify-content: space-between;
 }
 
-.edit-popup>.edit-body>.edit-buttons>button {
+.edit-popup>.edit-buttons>button {
   background-color: #242320;
   color: white;
   padding: 5px;
@@ -268,7 +276,7 @@ ul {
   transition: 0.5s;
 }
 
-.edit-popup>.edit-body>.edit-buttons>button:hover {
+.edit-popup>.edit-buttons>button:hover {
   background-color: #FF8303;
   border: 1px solid white;
   border-radius: 10px;
@@ -297,9 +305,3 @@ ul {
   border-radius: 10px;
 }
 
-.edit-body {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 10px;
-}

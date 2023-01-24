@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { AiFillEdit, AiOutlineShareAlt, AiOutlineCheckSquare } from 'react-icons/ai';
+import TodoEditPopup from './TodoEditPopup';
 
 const TodoList = ({ todoItem, setTodoList, todoList }) => {
 
   const [displayButtons, setDisplayButtons] = useState(false);
+  const [editPopup, setEditPopup] = useState(false);
+
 
   const deleteHandler = () => {
     setTodoList(todoList.filter(item => item.id !== todoItem.id))
@@ -27,6 +30,11 @@ const TodoList = ({ todoItem, setTodoList, todoList }) => {
     setDisplayButtons(!displayButtons)
   }
 
+  const displayEditPopup = (e) => {
+    e.preventDefault();
+    setEditPopup(!editPopup);
+  }
+
   return (
     <>
       <li className={`${todoItem.completed ? "todo-item-completed" : "todo-item"}`} onClick={displayButtonsFunc}>
@@ -36,31 +44,16 @@ const TodoList = ({ todoItem, setTodoList, todoList }) => {
       </li>
 
       <div className={displayButtons ? 'show-buttons' : 'hide-buttons'}>
-        <button><AiFillEdit /></button>
+        <button onClick={displayEditPopup}><AiFillEdit /></button>
         <button><AiOutlineShareAlt /></button>
         <button onClick={completeHandler}><AiOutlineCheckSquare /></button>
       </div>
 
-      <div className='edit-popup'>
-
-        <div className='close-popup'>
-          <button>X</button>
-        </div>
-
-        <div className='edit-body'>
-
-          <input className='edit-title' placeholder='Edit Title..' />
-          <input className='edit-content' placeholder='Edit Content..' />
-
-          <div className='edit-buttons'>
-            <button>Cancel</button>
-            <button>Save</button>
-          </div>
-
-        </div>
+      {editPopup ?
+          <TodoEditPopup editPopup={editPopup} setEditPopup={setEditPopup} />
+          : null}
 
 
-      </div>
     </>
   )
 }
