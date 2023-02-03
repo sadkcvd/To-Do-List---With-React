@@ -5,6 +5,7 @@ const TodoEditPopup = ({ editPopup, setEditPopup }) => {
 
     const displayEditPopup = (e) => {
         e.preventDefault();
+        setEditPopup(true)
         setEditPopup(false)
     }
 
